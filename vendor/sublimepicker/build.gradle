@@ -1,0 +1,57 @@
+apply plugin: 'com.android.library'
+
+ext {
+    bintrayRepo = 'maven'
+    bintrayName = 'sublime-picker'
+
+    publishedGroupId = 'com.appeaser.sublimepickerlibrary'
+    libraryName = 'SublimePicker'
+    artifact = 'sublimepickerlibrary'
+
+    libraryDescription = 'A material-styled android view that provisions picking of a date, time & recurrence option, all from a single user-interface.'
+
+    siteUrl = 'https://github.com/vikramkakkar/SublimePicker'
+    gitUrl = 'https://github.com/vikramkakkar/SublimePicker.git'
+
+    libraryVersion = '2.1.2'
+
+    developerId = 'vikramkakkar'
+    developerName = 'Vikram Kakkar'
+    developerEmail = 'vikram.kakkar.85@gmail.com'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
+
+android {
+    namespace 'com.appeaser.sublimepickerlibrary'
+    compileSdkVersion 34
+
+    defaultConfig {
+        minSdkVersion 14
+        targetSdkVersion 34
+        versionCode 4
+        versionName "2.1.2"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'androidx.appcompat:appcompat:1.0.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.gridlayout:gridlayout:1.0.0'
+    implementation 'androidx.annotation:annotation:1.1.0'
+}
+

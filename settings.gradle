@@ -16,3 +16,5 @@
  */
 
 include ':omniNotes'
+include ':sublimepicker'
+project(':sublimepicker').projectDir = file('vendor/sublimepicker')
